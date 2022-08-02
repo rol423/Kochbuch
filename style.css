@@ -3,3 +3,38 @@
     margin: 0;
     box-sizing: border-box;
 }
+main, header, footer {
+    margin: 0 auto;
+    max-width: 1140px;
+}
+form { max-width: 400px; }
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+.dinnerideen h3 {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #646260;
+}
+.dinnerideen_link {
+    font-family: "Merriweather", serif;
+    font-size: 45px;
+}
+.dinnerideen_kurzinfo   {
+    color: #c9c9c9;
+}
+.dinnerideen_grow:hover {
+    transform: scale(1.05);
+}
+.dinnerideen_grow {
+    transition: all .3s ease-in-out;
+}
+
+/* Overwrite Bootstrap */
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1140px;
+  }
