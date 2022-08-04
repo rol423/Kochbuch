@@ -3,18 +3,31 @@
     margin: 0;
     box-sizing: border-box;
 }
-main, header, footer {
+main, header, footer > div {
     margin: 0 auto;
-    max-width: 1140px;
+    max-width: 1164px;
 }
 form { max-width: 400px; }
 a {
     text-decoration: none;
     color: inherit;
 }
+a:hover {
+    color: #646260;
+}
+footer {
+    background: #333;
+    color: #eee;
+    margin-top: 3rem;
+    gap: 40px 5%;
+}
+footer > div > div { width: 100%; }
+footer > div > div > div { padding-top: 40px; }
 
-
-
+.dinnerideen { 
+    border: 1px solid #ccc;
+    box-shadow: 5px 10px 10px #ccc;
+}
 .dinnerideen h3 {
     font-weight: 700;
     text-transform: uppercase;
@@ -38,3 +51,4 @@ a {
 .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
     max-width: 1140px;
   }
+

@@ -1,0 +1,53 @@
+section     { width: 100%; }
+section + section { margin-top: 3rem; }
+
+
+
+.card-carousel  {
+    gap: 40px 5%;
+}
+.card   {
+    width: 30%;
+}
+.card > div {
+    position: relative;  
+}
+.card, .carousel_kurzinfo {
+    transition: all .5s ease-in-out;
+}
+.carousel_kurzinfo   {
+    position: absolute;
+    color: #c9c9c9;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.5);
+    padding-top: 1rem;
+}
+.card h4 {
+    margin: 1rem 0;
+    padding: 0 1rem;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.card:hover .carousel_kurzinfo {
+    opacity: 1;
+}
+
+@media only screen and (max-width: 767px) {
+    .card   {
+        width: 47%;
+    }
+    .card-carousel  {
+        gap: 25px 6%;
+    }
+}
+@media only screen and (max-width: 575px) {
+    .card   {
+        width: 100%;
+    }
+    .card-carousel  {
+        gap: 15px 0;
+    }
+}
