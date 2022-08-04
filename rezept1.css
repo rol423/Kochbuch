@@ -8,6 +8,7 @@ header,
 footer {
   margin: 0 auto;
   max-width: 1140px;
+  font-family: "Montserrat", sans-serif;
 }
 form {
   max-width: 400px;
@@ -44,4 +45,21 @@ a {
 .container-xl,
 .container-xxl {
   max-width: 1140px;
+}
+
+.Rezept-Tabelle {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#ueberschriften {
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 700;
+}
+
+#ueberschriften-klein {
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 400;
 }
