@@ -35,9 +35,9 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="style.css" />
+
     <link rel="stylesheet" href="rezept1.css" />
-    <link rel="stylesheet" href="styleRoland.css" />
+    
   </head>
   <body>
     <header class="navbar navbar-expand-lg p-2 justify-content-between">
@@ -73,9 +73,10 @@
           <div class="row">
             <div class="col-12">
               <img
-                class="img-fluid rounded-btm mx-auto"
+                class="img-fluid rounded-3 mx-auto"
                 src="img/burrito.webp"
                 alt="Image of a burrito"
+                id="image-Message"
               />
             </div>
           </div>
@@ -85,7 +86,7 @@
         <div class="row"></div>
       </div>
       <section class="Rezept-Name">
-        <div class="row sm-12 d-flex flex-column">
+        <div class="row sm-12 d-flex flex-column  ">
           <div class="col-12">
             <h2>Burrito mit Hähnchenfilet und Limettensauce</h2>
           </div>
@@ -258,21 +259,21 @@
           </div>
           <!-- Change HEIGT OF IMAGES -->
           <div class="row">
-            <div class="col-sm-12 col-md-6 col-lg-3 img-thumbnail ">
-              <img src="/img-small/clubSandwich.webp" alt="Image of a clubSandwich"height="300px" >
-              <p>Club Sandwich</p>
+            <div class="col-xs-12 col-sm-6 col-lg-3">
+              <img class="rounded-3" src="/img-small/clubSandwich.webp" alt="Image of a clubSandwich"width="200px" height="auto" >
+              <p class="text-start">Club Sandwich</p>
             </div>
-            <div class="col-sm-12 col-md-6 col-lg-3">
-              <img src="/img-small/Lachs.webp" alt="Image of a Salamon" height="300px">
-              <p>Lachs vom Grill</p>
+            <div class="col-xs-12 col-sm-6 col-lg-3">
+              <img class="rounded-3" src="/img-small/Lachs.webp" alt="Image of a Salamon" width="200px" height="auto">
+              <p class="text-start">Lachs vom Grill</p>
             </div>
-            <div class="col-sm-12 col-md-6 col-lg-3">
-              <img src="/img-small/pizza.webp" alt="Image of a Pizza"height="300px">
-              <p>Pizza wie vom Italiener</p>
+            <div class="col-xs-12 col-sm-6 col-lg-3">
+              <img class="rounded-3" src="/img-small/pizza.webp" alt="Image of a Pizza"width="200px" height="auto">
+              <p class="text-start">Pizza wie vom Italiener</p>
             </div>
-            <div class="col-sm-12 col-md-6 col-lg-3">
-              <img src="/img-small/tortellini.webp" alt="Image of Tortellini"height="300px">
-              <p>Hausgemacht Tortellini</p>
+            <div class="col-xs-12 col-sm-6 col-lg-3">
+              <img class="rounded-3" src="/img-small/tortellini.webp" alt="Image of Tortellini"width="200px" height="auto">
+              <p class="text-start">Hausgemacht Tortellini</p>
             </div>
           </div>
         </div>
@@ -285,5 +286,6 @@
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
+    <script src="rezept.js"></script>
   </body>
 </html>
