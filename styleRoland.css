@@ -3,11 +3,44 @@ section + section { margin-top: 3rem; }
 
 
 
+
+.dinnerideen { 
+    border: 1px solid #ccc;
+    box-shadow: 5px 10px 10px #ccc;
+    margin-left: 0 !important;
+}
+.dinnerideen_link {
+    font-family: "Merriweather", serif;
+    font-size: 45px;
+}
+.dinnerideen_kurzinfo   {
+    color: #c9c9c9;
+}
+.dinnerideen_grow:hover {
+    transform: scale(1.05);
+}
+.dinnerideen_grow {
+    transition: all .3s ease-in-out;
+}
+
+
+
+.filternav > nav > a {
+    font-weight: 700;
+    display: inline-block;
+    padding: 10px;
+}
+.filternav > nav > a:hover {
+    background: yellow;
+}
+
 .card-carousel  {
     gap: 40px 5%;
 }
 .card   {
     width: 30%;
+    transition: opacity 1s ease-in-out;
+    transition-delay: 0s;
 }
 .card > div {
     position: relative;  
@@ -35,7 +68,7 @@ section + section { margin-top: 3rem; }
     opacity: 1;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 991px) {
     .card   {
         width: 47%;
     }
@@ -48,6 +81,6 @@ section + section { margin-top: 3rem; }
         width: 100%;
     }
     .card-carousel  {
-        gap: 15px 0;
+        gap: 40px;
     }
 }
