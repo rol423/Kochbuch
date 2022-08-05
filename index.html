@@ -60,11 +60,20 @@
             </div>
         </div>
     </section>
-    <section></section>
-    <section class="card-carousel d-flex  flex-wrap">
+    <section class="filternav text-center">
+        <h3>What's Cooking Good Looking?</h3>
+        <nav>
+            <a onclick="return filternav('breakfast');">Breakfast</a>
+            <a onclick="return filternav('soup');">Soup</a>
+            <a onclick="return filternav('lunch');">Lunch</a>
+            <a onclick="return filternav('dinner');">Dinner</a>
+            <a onclick="return filternav('dessert');">Dessert</a>
+        </nav>
+    </section>
+    <section class="card-carousel d-flex  flex-wrap" id="filternav_container">
 
 
-        <div class="card">
+        <div class="card" data-filter="lunch">
             <div>
                 <img src="img-small\avocadoEggToast.webp" alt="" class="card-img-top">    
                 <div class="d-flex justify-content-around carousel_kurzinfo">
@@ -80,7 +89,7 @@
         </div>
 
 
-        <div class="card">
+        <div class="card" data-filter="lunch dinner">
             <div>
                 <img src="img-small\burger.webp" alt="" class="card-img-top">    
                 <div class="d-flex justify-content-around carousel_kurzinfo">
@@ -96,7 +105,7 @@
         </div>
 
         
-        <div class="card">
+        <div class="card" data-filter="lunch dinner">
             <div>
                 <img src="img-small\burrito.webp" alt="" class="card-img-top">    
                 <div class="d-flex justify-content-around carousel_kurzinfo">
@@ -112,7 +121,7 @@
         </div>
 
         
-        <div class="card">
+        <div class="card" data-filter="lunch dinner">
             <div>
                 <img src="img-small\clubSandwich.webp" alt="" class="card-img-top">    
                 <div class="d-flex justify-content-around carousel_kurzinfo">
@@ -128,7 +137,7 @@
         </div>
 
         
-        <div class="card">
+        <div class="card" data-filter="lunch dinner">
             <div>
                 <img src="img-small\dattelnImSpeckmantel.webp" alt="" class="card-img-top">    
                 <div class="d-flex justify-content-around carousel_kurzinfo">
@@ -144,7 +153,7 @@
         </div>
 
         
-        <div class="card">
+        <div class="card" data-filter="breakfast">
             <div>
                 <img src="img-small\frühstücksBowl.webp" alt="" class="card-img-top">    
                 <div class="d-flex justify-content-around carousel_kurzinfo">
@@ -160,7 +169,7 @@
         </div>
 
         
-        <div class="card">
+        <div class="card" data-filter="dessert">
             <div>
                 <img src="img-small\kuchen.webp" alt="" class="card-img-top">    
                 <div class="d-flex justify-content-around carousel_kurzinfo">
@@ -176,7 +185,7 @@
         </div>
 
         
-        <div class="card">
+        <div class="card" data-filter="lunch dinner">
             <div>
                 <img src="img-small\Lachs.webp" alt="" class="card-img-top">    
                 <div class="d-flex justify-content-around carousel_kurzinfo">
@@ -192,7 +201,7 @@
         </div>
 
         
-        <div class="card">
+        <div class="card" data-filter="dessert">
             <div>
                 <img src="img-small\macarons.webp" alt="" class="card-img-top">    
                 <div class="d-flex justify-content-around carousel_kurzinfo">
@@ -208,7 +217,7 @@
         </div>
 
         
-        <div class="card">
+        <div class="card" data-filter="dessert">
             <div>
                 <img src="img-small\pancakes.webp" alt="" class="card-img-top">    
                 <div class="d-flex justify-content-around carousel_kurzinfo">
@@ -224,7 +233,7 @@
         </div>
 
         
-        <div class="card">
+        <div class="card" data-filter="lunch dinner">
             <div>
                 <img src="img-small\pizza.webp" alt="" class="card-img-top">    
                 <div class="d-flex justify-content-around carousel_kurzinfo">
@@ -240,7 +249,7 @@
         </div>
 
         
-        <div class="card">
+        <div class="card" data-filter="lunch dinner">
             <div>
                 <img src="img-small\sandwich.webp" alt="" class="card-img-top">    
                 <div class="d-flex justify-content-around carousel_kurzinfo">
@@ -256,7 +265,7 @@
         </div>
 
         
-        <div class="card">
+        <div class="card" data-filter="dessert">
             <div>
                 <img src="img-small\schokoladenBrownie.webp" alt="" class="card-img-top">    
                 <div class="d-flex justify-content-around carousel_kurzinfo">
@@ -272,7 +281,7 @@
         </div>
 
         
-        <div class="card">
+        <div class="card" data-filter="soup">
             <div>
                 <img src="img-small\tomatensuppe.webp" alt="" class="card-img-top">    
                 <div class="d-flex justify-content-around carousel_kurzinfo">
@@ -326,5 +335,41 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     
+<script>
+    let meal;
+    function filternav(selection) {
+        let card, i;
+        let counter = 1;
+        meal = selection;
+        for (i = 0; i < document.getElementById('filternav_container').childNodes.length; i++) {
+            card = document.getElementById('filternav_container').childNodes[i];
+            if ((card.className === "card") && (card.style.display === "")) {
+                card.style.transitionDelay =	(counter / 8) + "s";
+                card.style.opacity = 0;
+                counter++;
+            }
+        }
+        setTimeout(filternav_result, 1500);
+    }
+    function filternav_result() {
+        let card, i;
+        let counter = 1;
+        for (i = 0; i < document.getElementById('filternav_container').childNodes.length; i++) {
+            card = document.getElementById('filternav_container').childNodes[i];
+            if (card.className === "card") {
+                card.style.transitionDelay =	"0s";
+                card.style.display = 'none';
+                card.style.opacity = 0;
+                if (card.getAttribute('data-filter').indexOf(meal) != -1) {
+                    card.style.transitionDelay =	(counter / 2) + "s";
+                    card.style.display = '';
+                    card.style.opacity = 1;
+                    counter++;
+                }
+            }
+        }
+        return false;
+    }
+</script>
 </body>
 </html>     
